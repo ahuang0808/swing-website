@@ -21,10 +21,9 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
 			<audio controls src={audio}>
                 Your browser does not support the audio element.
             </audio>
-            <p><{pubDate} /></p>
+            <p>{pubDate}</p>
             <img src={cover} alt={`Cover image for ${title}`} />
 			<div class="content" set:html={shownotes}></div>
-
         </article>
     </main>
     <Footer />

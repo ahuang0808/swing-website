@@ -9,11 +9,11 @@ export async function getStaticPaths() {
   return feed.items.map((item) => ({
     params: { slug: item.guid },
 	props: {
-	  title: item.title,
+	  title: item.title ? item.title : '',
       cover: item.itunes.image,
-      pubDate: item.isoDate,
-      shownotes: item.content,
-      audio: item.enclosure.url,
+      pubDate: item.isoDate ? new Date(item.isoDate) : new Date(),
+      shownotes: item.content ? item.content : '',
+      audio: item.enclosure && item.enclosure.url ? item.enclosure.url : '',
 	}
   }));
 }

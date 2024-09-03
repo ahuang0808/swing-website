@@ -3,13 +3,10 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Parser from 'rss-parser';
 
 const parser = new Parser();
 const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
-
 ---
 
 <!doctype html>
@@ -35,22 +32,30 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 			ul {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
-				gap: 2rem;
+				gap: 1rem;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
-				font-size: 5px;
 			}
 			ul li {
-				width: calc(50% - 1rem);
+				background-color: white;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem;
 			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
+			ul li:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 			}
 			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
+				width: 100%;
+				object-fit: cover;
 				border-radius: 50%;
 				transition: transform 0.5s ease-in-out;
 				mask-image: radial-gradient(circle, transparent 12%, black 12%);
@@ -68,30 +73,41 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 			}
 			ul li a {
 				display: block;
+				text-decoration: none;
+				color: inherit;
+				text-align: center;
+				width: 100%;
 			}
-			.title {
-				margin: 0;
+			ul li .content {
+				padding: 1rem;
+			}
+			ul li .title {
+				margin: 0.5rem 0;
+				font-size: 1rem;
 				color: rgb(var(--black));
-				line-height: 1;
+				line-height: 1.2;
 			}
-			.date {
+			ul li .date {
 				margin: 0;
+				font-size: 0.875rem;
 				color: rgb(var(--gray));
 			}
-			ul li a:hover h4,
+			ul li a:hover .title,
 			ul li a:hover .date {
 				color: rgb(var(--accent));
 			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
+			ul li a:hover img {
+				transform: scale(1.05);
+			}
+			@media (max-width: 1024px) {
+				ul {
+					grid-template-columns: repeat(2, 1fr);
+				}
 			}
 			@media (max-width: 720px) {
 				ul {
+					grid-template-columns: repeat(1, 1fr);
 					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
 				}
 			}
 		</style>
@@ -105,11 +121,10 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 						feed.items.map((item) => (
 							<li>
 								<a href={`/podcast/${item.guid}/`}>
-									<img width={2000} height={2000} src={item.itunes.image} alt="" />
-									<h4 class="title">{item.title}</h4>
-									{/* <p class="date">
-										<FormattedDate date={item.isoDate} />
-									</p> */}
+									<img src={item.itunes.image} alt="" />
+									<div class="content">
+										<h4 class="title">{item.title}</h4>
+									</div>
 								</a>
 							</li>
 						))

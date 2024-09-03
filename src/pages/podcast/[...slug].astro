@@ -3,7 +3,6 @@ import Parser from 'rss-parser';
 import PodcastEpisode from '../../layouts/PodcastEpisode.astro';
 
 export async function getStaticPaths() {
-  // 从 RSS feed 获取所有的播客条目
   const parser = new Parser();
   const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
   console.log(feed);
@@ -19,7 +18,6 @@ export async function getStaticPaths() {
   }));
 }
 
-// 获取当前页面的 guid 参数
 // const { guid } = Astro.params;
 const { title, cover, pubDate, shownotes, audio } = Astro.props;
 

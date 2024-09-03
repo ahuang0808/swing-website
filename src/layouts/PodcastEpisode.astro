@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'podcast'>['data'];
+
+const { title, cover, pubDate, shownotes, audio } = Astro.props;
+---
+
+<html lang="en">
+<head>
+    <BaseHead title={title} description={title}/>
+</head>
+<body>
+    <Header />
+    <main>
+        <article>
+            <h1>{title}</h1>
+			<audio controls src={audio}>
+                Your browser does not support the audio element.
+            </audio>
+            <p><{pubDate} /></p>
+            <img src={cover} alt={`Cover image for ${title}`} />
+			<div class="content" set:html={shownotes}></div>
+
+        </article>
+    </main>
+    <Footer />
+</body>
+</html>

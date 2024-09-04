@@ -12,4 +12,17 @@ const podcast = defineCollection({
 	}),
 });
 
-export const collections = { podcast };
+const stuff = defineCollection({
+	type: 'content',
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		name: z.string(),
+		series: z.string(),
+		// Transform string to Date object
+		pubDate: z.coerce.date(),
+		heroImage: z.string(),
+		images: z.string()
+	}),
+});
+
+export const collections = { podcast, stuff };

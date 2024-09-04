@@ -7,13 +7,13 @@ export async function getStaticPaths() {
   const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
   return feed.items.map((item) => ({
     params: { slug: item.guid },
-	props: {
-	  title: item.title ? item.title : '',
-      cover: item.itunes.image,
-      pubDate: item.isoDate ? new Date(item.isoDate) : new Date(),
-      shownotes: item.content ? item.content : '',
-      audio: item.enclosure && item.enclosure.url ? item.enclosure.url : '',
-	}
+    props: {
+      title: item.title ? item.title : '',
+        cover: item.itunes.image,
+        pubDate: item.isoDate ? new Date(item.isoDate) : new Date(),
+        shownotes: item.content ? item.content : '',
+        audio: item.enclosure && item.enclosure.url ? item.enclosure.url : '',
+    }
   }));
 }
 

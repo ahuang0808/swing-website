@@ -5,57 +5,41 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--black: 0, 0, 0;
+	--white: 255, 255, 255;
+	--gray: 179, 179, 179;
+	--gray-light: 230, 230, 230;
+	--gray-dark: 77, 77, 77;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+	font-family: 'SourceHanSansCN';
+	src: url('/fonts/SourceHanSansCN-Normal.otf') format('opentype');
+	unicode-range: U+4E00-9FFF;
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+	font-family: 'Avenir Medium';
+	src: url('/fonts/Avenir-Medium.woff') format('woff');
+	unicode-range: U+0000-00FF;
+}
+@font-face {
+	font-family: 'Avenir Roman';
+	src: url('/fonts/Avenir-Roman.woff') format('woff');
+	unicode-range: U+0000-00FF;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Avenir Roman', 'SourceHanSansCN';
 	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	background: rgb(var(--white));
 	font-size: 20px;
-	line-height: 1.7;
+	/* make page one-window size */
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 main {
-	flex: 1;
-	width: 100%;
-	max-width: calc(100% - 1em);
-	margin: auto;
 	padding: 1em 1em;
-	box-sizing: border-box;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
+	/* make page one-window size */
+	flex-grow: 1;
 }

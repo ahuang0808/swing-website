@@ -2,6 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import Parser from 'rss-parser';
 
@@ -32,10 +33,17 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 			ul {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
-				gap: 1rem;
+				gap: 4rem;
 				list-style-type: none;
-				margin: 0;
+				margin: 2;
 				padding: 0;
+			}
+			ul a {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+				text-align: center;
+				width: 100%;
 			}
 			ul img {
 				width: 100%;
@@ -55,21 +63,13 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 					transform: rotate(360deg);
 				}
 			}
-			ul a {
-				display: block;
-				text-decoration: none;
-				color: inherit;
-				text-align: center;
-				width: 100%;
+			ul .description {
+				text-align: left;
+				padding-left: 2rem;
 			}
-			ul .content {
-				padding: 1rem;
-			}
-			ul .title {
-				margin: 0.5rem 0;
-				font-size: 1rem;
-				color: rgb(var(--black));
-				line-height: 1.2;
+			ul .description .date {
+				font-size: 16px;
+				color: #999;
 			}
 		</style>
 	</head>
@@ -82,8 +82,9 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 						feed.items.map((item) => (
 							<a href={`/podcast/${item.guid}/`}>
 								<img src={item.itunes.image} alt="" />
-								<div class="content">
-									<h4 class="title">{item.title}</h4>
+								<div class="description">
+									<div class="date"><FormattedDate isoDate={item.isoDate ? item.isoDate : '' } /></div>
+									<div class="title">{item.title}</div>
 								</div>
 							</a>
 						))

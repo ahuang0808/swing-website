@@ -6,7 +6,7 @@ const podcast = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		cover: z.string().url(),
-		pubDate: z.coerce.date(),
+		pubDate: z.string(),
 		shownotes: z.string(),
 		audio: z.string().url(),
 	}),

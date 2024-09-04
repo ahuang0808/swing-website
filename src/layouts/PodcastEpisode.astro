@@ -3,29 +3,74 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'podcast'>['data'];
 
 const { title, cover, pubDate, shownotes, audio } = Astro.props;
+
 ---
 
 <html lang="en">
 <head>
     <BaseHead title={title} description={title}/>
+    <style>
+        body {
+            margin: 0;
+            padding-bottom: 4em; /* space for the player */ 
+        }
+        
+        .sidebar {
+            flex: 0 0 20%;
+            padding-right: 1em;
+            border-right: 1px solid rgb(var(--gray-light));
+            /* stick the sidebar*/
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 4em);
+        }
+        
+        .shownotes {
+            padding-left: 1em;
+        }
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(var(--white));
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* make sure player on the top */
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 800px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <Header />
     <main>
-        <article>
+        <aside class="sidebar">
             <h1>{title}</h1>
-			<audio controls src={audio}>
-                Your browser does not support the audio element.
-            </audio>
-            <p>{pubDate}</p>
+            <div class="date"><FormattedDate isoDate={pubDate} /></div>
             <img src={cover} alt={`Cover image for ${title}`} />
-			<div class="content" set:html={shownotes}></div>
-        </article>
+        </aside>
+        <div class="shownotes" set:html={shownotes}></div>
     </main>
     <Footer />
+    
+    <!-- stick the player on the bottom -->
+    <div class="audio-player">
+        <audio controls src={audio} controlslist="nodownload">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 </body>
 </html>

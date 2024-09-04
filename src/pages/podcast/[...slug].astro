@@ -10,7 +10,7 @@ export async function getStaticPaths() {
     props: {
       title: item.title ? item.title : '',
         cover: item.itunes.image,
-        pubDate: item.isoDate ? new Date(item.isoDate) : new Date(),
+        pubDate: item.isoDate ? item.isoDate : '',
         shownotes: item.content ? item.content : '',
         audio: item.enclosure && item.enclosure.url ? item.enclosure.url : '',
     }

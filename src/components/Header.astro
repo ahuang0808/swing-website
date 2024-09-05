@@ -14,6 +14,9 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 		<a href="/">
 			<img src="/images/logo.png" alt={SITE_TITLE}>
 		</a>
+		<button class="menu-toggle" aria-label="Toggle Menu">
+			<span class="menu-icon">&#9776;</span>
+		</button>
 		<div class="internal-links">
 			<HeaderLink href="/podcast">Podcast</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -44,4 +47,45 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 		display: flex;
 		gap: 2em;
 	}
+	.menu-toggle {
+		display: none;
+		background: none;
+		border: none;
+		font-size: 2.5em;
+		cursor: pointer;
+	}
+
+	@media (max-width: 720px) {
+		nav .internal-links {
+			display: none;
+			flex-direction: column;
+			gap: 1em;
+			position: absolute;
+			top: 100%;
+			padding-right: 3em;
+			right: 0;
+			background-color: rgb(var(--white));
+			width: 100%;
+			/* border: 1px solid rgb(var(--gray-light)); */
+			text-align: right;
+		}
+
+		.menu-toggle {
+			display: block;
+		}
+
+		nav.open .internal-links {
+			display: flex;
+		}
+	}
 </style>
+<script>
+	// 获取按钮和导航容器
+	const menuToggle = document.querySelector('.menu-toggle');
+	const nav = document.querySelector('nav');
+
+	// 点击按钮时，切换导航菜单的显示
+	menuToggle.addEventListener('click', () => {
+		nav.classList.toggle('open');
+	});
+</script>

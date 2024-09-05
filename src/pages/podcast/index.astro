@@ -69,8 +69,12 @@ const feed = await parser.parseURL('https://feed.xyzfm.space/vadx8cv4dgcb');
 				padding-top: 1em;
 			}
 			ul .description .date {
-				font-size: 16px;
+				font-size: var(--normal-text-font);
 				color: rgb(var(--gray));
+			}
+
+			ul .description .title {
+				font-size: var(--header-text-font);
 			}
 		</style>
 	</head>

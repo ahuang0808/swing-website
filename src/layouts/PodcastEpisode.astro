@@ -34,19 +34,20 @@ console.log(audio);
             height: 3em;
             margin-top: 1em;
             margin-bottom: 1em;
-            border: 1px solid rgb(var(--black)); /* 黑色实线边框 */
-            border-radius: 15px; /* 圆角边框 */
+            border: 1px solid rgb(var(--black));
+            border-radius: 15px;
         }
         audio::-webkit-media-controls-panel {
-            background-color: rgb(var(--gray-super-light)); /* 控件面板的背景颜色 */
+            background-color: rgb(var(--gray-super-light));
         }
         .sidebar .title {
+            font-size: var(--header-text-font);
             padding-left: 0.3em;
         }
         .sidebar .date {
             padding-top: 0.3em;
             padding-left: 0.3em;
-            font-size: 16px;
+            font-size: var(--normal-text-font);
             color: rgb(var(--gray));
         }
         .shownotes {

@@ -12,6 +12,8 @@
 	--gray: 179, 179, 179;
 	--gray-dark: 77, 77, 77;
 	--yellow: 250, 230, 123;
+	--header-text-font: 22px;
+	--normal-text-font: 18px;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
@@ -34,12 +36,13 @@ body {
 	font-family: 'Avenir Roman', 'SourceHanSansCN';
 	margin: 0;
 	background: rgb(var(--white));
-	font-size: 20px;
+	font-size: var(--normal-text-font);
 	/* make page one-window size */
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	max-width: 100vw;
+	overflow-y: scroll;
 }
 main {
 	padding: 3em;
@@ -58,13 +61,13 @@ img {
 }
 
 .shownotes p {
-	font-size: 18px;
+	font-size: var(--normal-text-font);
 	color: rgb(var(--gray-dark));
 	margin: 0em;
 }
 
 .shownotes li {
-	font-size: 18px;
+	font-size: var(--normal-text-font);
 	color: rgb(var(--gray-dark));
 }
 
@@ -74,7 +77,7 @@ img {
 }
 
 .shownotes h2 {
-	font-size: 22px;
+	font-size: var(--header-text-font);
 }
 
 .shownotes figure {

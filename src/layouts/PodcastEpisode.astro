@@ -54,7 +54,28 @@ console.log(audio);
             padding-left: 3em;
             border-left: 1px solid rgb(var(--gray-light));
         }
+        @media (max-width: 720px) {
+            main {
+                flex-direction: column;
+            }
+            .sidebar {
+                padding-right: 0;
+                position: static;
+                width: 100%;
+            }
 
+            .shownotes-container {
+                padding-left: 0;
+                padding-top: 1em;
+                border-top: 1px solid rgb(var(--gray-light));
+                margin-top: 1em;
+            }
+
+            .shownotes {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
     </style>
 </head>
 <body>

@@ -66,6 +66,7 @@ a {
 
 .shownotes img {
 	width: 70%;
+	min-width: 312px
 }
 
 .shownotes p {
@@ -87,4 +88,16 @@ a {
 .shownotes figure {
 	margin-left: 0;
 	margin-bottom: 1em;
+}
+
+@media (max-width: 1300px) {
+	.shownotes img {
+		min-width: 350px
+	}
+}
+
+@media (max-width: 720px) {
+	.shownotes img {
+		min-width: 377px
+	}
 }

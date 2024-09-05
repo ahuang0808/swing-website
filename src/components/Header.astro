@@ -66,7 +66,7 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 			right: 0;
 			background-color: rgb(var(--white));
 			width: 100%;
-			/* border: 1px solid rgb(var(--gray-light)); */
+			border-bottom: 1px solid rgb(var(--gray-light));
 			text-align: right;
 		}
 
@@ -80,12 +80,12 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 	}
 </style>
 <script>
-	// 获取按钮和导航容器
 	const menuToggle = document.querySelector('.menu-toggle');
 	const nav = document.querySelector('nav');
 
-	// 点击按钮时，切换导航菜单的显示
-	menuToggle.addEventListener('click', () => {
-		nav.classList.toggle('open');
-	});
+	if (menuToggle && nav) {
+		menuToggle.addEventListener('click', () => {
+			nav.classList.toggle('open');
+		});
+	}
 </script>

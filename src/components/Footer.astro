@@ -1,8 +1,13 @@
 ---
+interface Props {
+	backgroundColor: string;
+}
+
 const today = new Date();
+const { backgroundColor = 'white' } = Astro.props; // 默认背景颜色为白色
 ---
 
-<footer>
+<footer style={`background-color: ${backgroundColor};`}>
 	&copy; {today.getFullYear()} swing studio. All rights reserved.
 </footer>
 <style>

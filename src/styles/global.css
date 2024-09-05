@@ -14,6 +14,7 @@
 	--yellow: 250, 230, 123;
 	--header-text-font: 22px;
 	--normal-text-font: 18px;
+	--small-text-font: 16px;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
@@ -57,6 +58,10 @@ img {
 	height: auto;
 }
 
+a {
+	color: rgb(var(--gray-dark));
+  }
+
 .shownotes img {
 	width: 70%;
 }
@@ -72,10 +77,6 @@ img {
 	color: rgb(var(--gray-dark));
 }
 
-.shownotes a {
-	color: rgb(var(--gray-dark));
-
-}
 
 .shownotes h2 {
 	font-size: var(--header-text-font);

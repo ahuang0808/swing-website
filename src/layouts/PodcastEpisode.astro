@@ -22,7 +22,6 @@ console.log(audio);
         }
         .sidebar {
             padding-right: 3em;
-            border-right: 1px solid rgb(var(--gray-light));
             /* stick the sidebar*/
             position: fixed;
             width: 25%;
@@ -48,9 +47,12 @@ console.log(audio);
             font-size: var(--normal-text-font);
             color: rgb(var(--gray));
         }
+        .shownotes-container {
+            padding-left: calc(25% + 1.5em + 3em);
+        }
         .shownotes {
-            padding-left: calc(25% + 1.5em + 6em);
-            
+            padding-left: 3em;
+            border-left: 1px solid rgb(var(--gray-light));
         }
 
     </style>
@@ -66,7 +68,9 @@ console.log(audio);
             <div class="title">{title}</div>
             <div class="date"><FormattedDate isoDate={pubDate} /></div>
         </aside>
-        <div class="shownotes" set:html={shownotes}></div>
+        <div class="shownotes-container">
+            <div class="shownotes" set:html={shownotes}></div>
+        </divdiv>
     </main>
     <GrayFooter />
     

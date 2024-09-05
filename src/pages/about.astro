@@ -13,82 +13,121 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       main {
         flex-direction: column;
       }
-      .row {
+      .swing {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-bottom: 2em;
       }
 
       .column {
         flex: 1;
-        box-sizing: border-box;
       }
 
       .column.left {
-        text-align: left;
+        font-size: 3em;
+        flex: 0 0 35%;
       }
 
       .column.right {
-        text-align: justify;
+        text-align: justify
+        flex: 1;
+      }
+      .column.right .swing-cn {
+        padding-top: 1em;
+      }
+      .column.right .swing-contact {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
       }
 
       .creators {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        padding-top: 5em;
       }
 
       .creator {
+        display: flex;
+        flex: 1; 
+      }
+      .creator.left {
+        flex: 0 0 auto;
+        flex-direction: column;
+        width: auto;
+      }
+      .creator.right {
         flex: 1;
-        align-items: flex-start;
-        margin: 0 1em;
+        flex-direction:column;
+        padding-left: 3em;
+        padding-top: 1.5em;
+      }
+      .creator.right div {
+        font-size: var(--small-text-font);
       }
 
       .creator img {
-        max-width: 150px;
+        max-width: 100%;
+        max-width: 200px;
         border-radius: 50%;
         margin-bottom: 1em;
       }
-
-      .creator h3 {
-        margin: 0.5em 0;
-      }
-
-      .creator p {
-        font-size: var(--normal-text-font);
-        color: #555;
+      .creator .name{
+        font-size: var(--header-text-font); 
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <Header />
     <main>
-        <div class="row">
+        <div class="swing">
           <div class="column left">
-            <h2>About Swing</h2>
+            About Swing
           </div>
           <div class="column right">
-            <p>
-              Swing DescriptionSwing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description Swing Description 
-            </p>
-          </div>
-        </div>
-        <div class="row creators">
-          <div class="creator">
-            <img src="/images/aiden.jpg" alt="Aiden Huang">
-            <h3>Aiden Huang</h3>
-            <p>
-              Aiden's Description
-            </p>
-          </div>
-          <div class="creator">
-            <img src="/images/flora.jpg" alt="Flora Yao">
-            <h3>Flora Yao</h3>
-            <p>
-              Flora's Description
-            </p>
+              <div class="swing-en">
+                Swing DescriptionSwing Description Swing Description Swing Description Swing Description
+                 Swing Description Swing Description Swing Description Swing Description Swing Description Swin
+                 g Description Swing Description Swing Description Swing Description Swing Description Swing Description 
+                 Swing Description Swing Description Swing Description Swing Description Swing Description
+              </div>
+              <div class="swing-cn">
+                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
+                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
+                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
+                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
+              </div>
+              <nav class="swing-contact">
+                <div>Instagram: <a href="https://www.instagram.com/swingofficial000" target="_blank">swingofficial000</a></div>
+                <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
+                <div>Weibo: <a href="https://weibo.com/u/7872160033" target="_blank">SwingOfficial</a></div>
+              </nav>
+              <div class="creators">
+                <div class="creator">
+                  <div class="creator left">
+                    <img src="/images/aiden.jpg" alt="Aiden Huang">
+                    <div class="name">Aiden Huang</div>
+                  </div>
+                  <nav class="creator right">
+                      <div>Instagram: <a href="https://www.instagram.com/ahuang0808" target="_blank">ahuang0808</a></div>
+                      <div>Youtube: <a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
+                      <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
+                      <div>Bilibili: <a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
+                      <div>Weibo: <a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
+                      <div>Email: <a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
+                  </nav>
+                </div>
+                <div class="creator">
+                  <div class="creator left">
+                    <img src="/images/flora.jpg" alt="Flora Yao">
+                    <div class="name">Flora Yao</div>
+                  </div>
+                  <nav class="creator right">
+                    <div>Instagram: <a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
+                    <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
+                    <div>Weibo: <a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
+                    <div>Email: <a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
+                </nav>
+                </div>
+              </div>
           </div>
         </div>
     </main>

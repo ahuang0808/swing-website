@@ -47,6 +47,7 @@ body {
 main {
 	padding: 3em;
 	display: flex;
+	margin-top: calc(5em + 7px); /* add the boader line */
 	/* make page one-window size */
 	flex-grow: 1;
 }

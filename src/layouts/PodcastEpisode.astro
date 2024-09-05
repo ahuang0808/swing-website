@@ -21,13 +21,11 @@ console.log(audio);
             background-color: rgb(var(--gray-super-light));
         }
         .sidebar {
-            flex: 0 0 25%;
             padding-right: 3em;
             border-right: 1px solid rgb(var(--gray-light));
             /* stick the sidebar*/
-            position: sticky;
-            top: 0;
-            height: calc(100vh - 4em);
+            position: fixed;
+            width: 25%;
         }
         .sidebar audio {
             width: 100%;
@@ -51,7 +49,8 @@ console.log(audio);
             color: rgb(var(--gray));
         }
         .shownotes {
-            padding-left: 3em;
+            padding-left: calc(25% + 1.5em + 6em);
+            
         }
 
     </style>

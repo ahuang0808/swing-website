@@ -36,6 +36,7 @@
 }
 body {
 	font-family: 'Avenir Roman', 'SourceHanSansCN';
+	-webkit-font-smoothing: antialiased; /* 或者 `subpixel-antialiased` */
 	margin: 0;
 	background: rgb(var(--white));
 	font-size: var(--normal-text-font);

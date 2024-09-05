@@ -1,13 +1,15 @@
 ---
 interface Props {
 	backgroundColor?: string;
+	color?: string;
 }
 
 const today = new Date();
-const { backgroundColor } = Astro.props;
+const { backgroundColor, color } = Astro.props;
+const footerColor = color ? color : 'rgb(var(--gray))';
 ---
 
-<footer style={`background-color: ${backgroundColor};`}>
+<footer style={`background-color: ${backgroundColor}; color: ${footerColor};`}>
 	&copy; {today.getFullYear()} swing studio. All rights reserved.
 </footer>
 <style>

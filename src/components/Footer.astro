@@ -4,7 +4,7 @@ interface Props {
 }
 
 const today = new Date();
-const { backgroundColor = 'white' } = Astro.props; // 默认背景颜色为白色
+const { backgroundColor } = Astro.props;
 ---
 
 <footer style={`background-color: ${backgroundColor};`}>

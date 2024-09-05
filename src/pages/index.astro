@@ -9,11 +9,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			body {
+			  margin: 0;
+			  padding: 0;
+			  background-image: url("/home/swing.gif"); /* 替换为你的GIF文件路径 */
+			  background-size: cover; /* 确保背景覆盖整个页面 */
+			  background-repeat: no-repeat; /* 防止背景重复 */
+			  background-attachment: fixed; /* 背景随着页面滚动保持固定 */
+			  background-position: center; /* 将背景居中 */
+			}
+			main {
+				justify-content: center; /* 水平居中 */
+				align-items: center;     /* 垂直居中 */
+			}
+			.slogan {
+				font-size: 3em;
+				color: rgb(var(--white));
+			}
+		  </style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Find Your Swing</h1>
+			<div class="slogan">Find Your Swing</div>
 		</main>
 		<Footer />
 	</body>

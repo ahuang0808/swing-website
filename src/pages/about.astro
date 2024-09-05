@@ -46,6 +46,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         flex-direction: column;
         padding-top: 3em;
       }
+      .column.right .swing-contact div{
+        margin-bottom: 0.3em;
+      }
 
       .creators {
         display: flex;
@@ -60,20 +63,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         flex: 0 0 auto;
         flex-direction: column;
         width: auto;
+        max-width: 180px; 
       }
       .creator.right {
         flex: 1;
         flex-direction:column;
-        padding-left: 1em;
+        padding-left: 2em;
         padding-top: 1em;
       }
       .creator.right div {
         font-size: var(--small-text-font);
+        margin-bottom: 0.2em;
       }
 
       .creator img {
-        max-width: 100%;
-        max-width: 180px;
+        width: 100%;
+        height: auto;
         border-radius: 50%;
         margin-bottom: 1em;
       }
@@ -92,50 +97,44 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           </div>
           <div class="column right">
               <div class="swing-en">
-                Swing DescriptionSwing Description Swing Description Swing Description Swing Description
-                 Swing Description Swing Description Swing Description Swing Description Swing Description Swin
-                 g Description Swing Description Swing Description Swing Description Swing Description Swing Description 
-                 Swing Description Swing Description Swing Description Swing Description Swing Description
+                Welcome to the playground of Flora and Aiden. We often think back to those moments of relaxation on the swing: light, free, and relax. Swing is our brand and our personal space. It encompasses video, podcasts, and photography, and who knows, maybe some writing, illustrations, products, and more in the future. We wanted to try out many different things, so we packed a bit of possibility into this site. Thank you for finding us, and we invite you to join us in feeling the joy of having your feet off the ground!
               </div>
               <div class="swing-cn">
-                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
-                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
-                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
-                 中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
+                欢迎来到花花和阿黄的乐园。我们常常想起坐在秋千上放松的时刻：轻盈的、自由的、松弛的。Swing是我们的品牌，也是我们的自留地，它包含了影像、播客、和照片，未来也许有一些文字、图像、产品啊等等（谁知道呢嘿嘿）。因为想尝试很多不一样的事，所以把一些些可能性塞在这个网站里，谢谢你找到我们，也邀请你跟我们一起，感受双脚离地的快乐！
               </div>
               <nav class="swing-contact">
                 <div><strong>Instagram: </strong><a href="https://www.instagram.com/swingofficial000" target="_blank">swingofficial000</a></div>
                 <div><strong>Xiaohongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
                 <div><strong>Weibo: </strong><a href="https://weibo.com/u/7872160033" target="_blank">SwingOfficial</a></div>
               </nav>
-              <div class="creators">
-                <div class="creator">
-                  <div class="creator left">
-                    <img src="/images/aiden.jpg" alt="Aiden Huang">
-                    <div class="name">Aiden Huang</div>
-                  </div>
-                  <nav class="creator right">
-                      <div><strong>Instagram: </strong><a href="https://www.instagram.com/ahuang0808" target="_blank">ahuang0808</a></div>
-                      <div><strong>Youtube: </strong><a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
-                      <div><strong>Xiaohongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
-                      <div><strong>Bilibili: </strong><a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
-                      <div><strong>Weibo: </strong><a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
-                      <div><strong>Email: </strong><a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
-                  </nav>
-                </div>
-                <div class="creator">
-                  <div class="creator left">
-                    <img src="/images/flora.jpg" alt="Flora Yao">
-                    <div class="name">Flora Yao</div>
-                  </div>
-                  <nav class="creator right">
-                    <div><strong>Instagram: </strong><a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
-                    <div><strong>Xiahongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
-                    <div><strong>Weibo: </strong><a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
-                    <div><strong>Email: </strong> <a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
-                </nav>
-                </div>
-              </div>
+          </div>        
+        </div>
+        <div class="creators">
+          <div class="creator">
+            <div class="creator left">
+              <img src="/images/aiden.jpg" alt="Aiden Huang">
+              <div class="name">Aiden Huang</div>
+            </div>
+            <nav class="creator right">
+                <div><strong>Instagram: </strong><a href="https://www.instagram.com/ahuang0808" target="_blank">ahuang0808</a></div>
+                <div><strong>Youtube: </strong><a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
+                <div><strong>Xiaohongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
+                <div><strong>Bilibili: </strong><a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
+                <div><strong>Weibo: </strong><a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
+                <div><strong>Email: </strong><a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
+            </nav>
+          </div>
+          <div class="creator">
+            <div class="creator left">
+              <img src="/images/flora.jpg" alt="Flora Yao">
+              <div class="name">Flora Yao</div>
+            </div>
+            <nav class="creator right">
+              <div><strong>Instagram: </strong><a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
+              <div><strong>Xiahongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
+              <div><strong>Weibo: </strong><a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
+              <div><strong>Email: </strong> <a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
+          </nav>
           </div>
         </div>
     </main>

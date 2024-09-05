@@ -13,6 +13,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       main {
         flex-direction: column;
       }
+      a {
+        text-decoration: none;
+        color: rgb(var(--gray-less-dark));
+      }
+      strong {
+        font-family: 'Avenir Medium', 'SourceHanSansCN';
+      }
       .swing {
         display: flex;
       }
@@ -29,6 +36,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       .column.right {
         text-align: justify
         flex: 1;
+        padding-right: 15%;
       }
       .column.right .swing-cn {
         padding-top: 1em;
@@ -36,7 +44,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       .column.right .swing-contact {
         display: flex;
         flex-direction: column;
-        padding-top: 1em;
+        padding-top: 3em;
       }
 
       .creators {
@@ -56,8 +64,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       .creator.right {
         flex: 1;
         flex-direction:column;
-        padding-left: 3em;
-        padding-top: 1.5em;
+        padding-left: 1em;
+        padding-top: 1em;
       }
       .creator.right div {
         font-size: var(--small-text-font);
@@ -65,7 +73,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
       .creator img {
         max-width: 100%;
-        max-width: 200px;
+        max-width: 180px;
         border-radius: 50%;
         margin-bottom: 1em;
       }
@@ -96,9 +104,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                  中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍中文介绍
               </div>
               <nav class="swing-contact">
-                <div>Instagram: <a href="https://www.instagram.com/swingofficial000" target="_blank">swingofficial000</a></div>
-                <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
-                <div>Weibo: <a href="https://weibo.com/u/7872160033" target="_blank">SwingOfficial</a></div>
+                <div><strong>Instagram: </strong><a href="https://www.instagram.com/swingofficial000" target="_blank">swingofficial000</a></div>
+                <div><strong>Xiaohongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
+                <div><strong>Weibo: </strong><a href="https://weibo.com/u/7872160033" target="_blank">SwingOfficial</a></div>
               </nav>
               <div class="creators">
                 <div class="creator">
@@ -107,12 +115,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div class="name">Aiden Huang</div>
                   </div>
                   <nav class="creator right">
-                      <div>Instagram: <a href="https://www.instagram.com/ahuang0808" target="_blank">ahuang0808</a></div>
-                      <div>Youtube: <a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
-                      <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
-                      <div>Bilibili: <a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
-                      <div>Weibo: <a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
-                      <div>Email: <a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
+                      <div><strong>Instagram: </strong><a href="https://www.instagram.com/ahuang0808" target="_blank">ahuang0808</a></div>
+                      <div><strong>Youtube: </strong><a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
+                      <div><strong>Xiaohongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
+                      <div><strong>Bilibili: </strong><a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
+                      <div><strong>Weibo: </strong><a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
+                      <div><strong>Email: </strong><a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
                   </nav>
                 </div>
                 <div class="creator">
@@ -121,10 +129,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div class="name">Flora Yao</div>
                   </div>
                   <nav class="creator right">
-                    <div>Instagram: <a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
-                    <div>Xiaohongshu: <a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
-                    <div>Weibo: <a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
-                    <div>Email: <a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
+                    <div><strong>Instagram: </strong><a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
+                    <div><strong>Xiahongshu: </strong><a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
+                    <div><strong>Weibo: </strong><a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
+                    <div><strong>Email: </strong> <a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
                 </nav>
                 </div>
               </div>

@@ -38,12 +38,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       .column.left {
         font-size: 3em;
         flex: 0 0 35%;
+        padding-bottom: 1em;
       }
 
       .column.right {
         text-align: justify
         flex: 1;
         padding-right: 15%;
+        padding-left: 2em;
       }
       .column.right .swing-en {
         padding-top: 1em;
@@ -67,7 +69,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         flex: 0 0 auto;
         flex-direction: column;
         width: auto;
-        max-width: 180px; 
+        max-width: 180px;
       }
       .creator .contact {
         flex: 1;
@@ -87,6 +89,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         text-align: center;
       }
       @media (max-width: 1200px) {
+          .column.right {
+            padding-right: 0;
+          }
           .creators {
               flex-direction: column;
               padding-top: 1em;
@@ -96,16 +101,46 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             flex: 1; 
             padding-top: 3em;
           }
+
+          .creator .profile {
+            flex: 0 0 35%;
+            min-width: 35%;
+          }
+
+          .creator img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1em;
+          }
+
+          .creator .name {
+            padding-right: 90px;
+          }
       }
       @media (max-width: 720px) {
           .swing {
               flex-direction: column;
           }
+          .column.left {
+            font-size: 2em;
+            flex: 0 1 auto;
+          }
+
           .column.right {
-          text-align: justify
-          flex: 1;
-          padding-right: 0;
-        }
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .creator .name {
+            padding-right: 0;
+            font-size: var(--small-text-font);
+          }
+          .creator .contact {
+            flex: 1;
+            padding-left: 1em;
+            padding-top: 0.5em;
+            font-size: 12px;
+          }
       }
     </style>
   </head>

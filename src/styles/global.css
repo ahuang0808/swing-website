@@ -44,7 +44,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	max-width: 100vw;
+	/* max-width: 100vw; */
 	overflow-y: scroll;
 }
 main {
@@ -70,19 +70,12 @@ a {
 }
 
 .shownotes p {
-	font-size: var(--normal-text-font);
 	color: rgb(var(--gray-dark));
 	margin: 0em;
 }
 
 .shownotes li {
-	font-size: var(--normal-text-font);
 	color: rgb(var(--gray-dark));
-}
-
-
-.shownotes h2 {
-	font-size: var(--header-text-font);
 }
 
 .shownotes figure {
@@ -97,7 +90,11 @@ a {
 }
 
 @media (max-width: 720px) {
+	.shownotes figure {
+		margin-right: 0;
+	}
+
 	.shownotes img {
-		min-width: 377px
+		min-width: 100%
 	}
 }

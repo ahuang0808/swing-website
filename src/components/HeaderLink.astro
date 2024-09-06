@@ -23,4 +23,12 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 		font-family: 'Avenir Medium';
 		color: rgb(var(--black))
 	}
+
+	@media (max-width: 720px) {
+		a {
+			color: rgb(var(--gray-dark));
+			text-decoration: none;
+			font-size: 1.5em;
+		}
+	}
 </style>

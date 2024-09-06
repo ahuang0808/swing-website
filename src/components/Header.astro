@@ -38,7 +38,6 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 		align-items: center;
 		justify-content: space-between;
 	}
-
 	nav a img{
 		height: 3em;
 	}
@@ -51,11 +50,15 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 		display: none;
 		background: none;
 		border: none;
-		font-size: 2.5em;
+		font-size: 2em;
 		cursor: pointer;
+		padding-bottom: 15px;
 	}
 
 	@media (max-width: 720px) {
+		nav a img{
+			height: 2em;
+		}
 		nav .internal-links {
 			display: none;
 			flex-direction: column;

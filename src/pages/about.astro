@@ -13,19 +13,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       main {
         flex-direction: column;
       }
-      a {
-        text-decoration: none;
-        color: rgb(var(--gray-less-dark));
-        padding-left: 1em;
-      }
-      strong {
-        font-family: 'Avenir Medium', 'SourceHanSansCN';
-        width: 200px;
-      }
       .contact {
         display: flex;
         flex-direction: column;
         margin-bottom: 0.3em;
+      }
+      .contact strong{
+        display: table-cell;
+        font-family: 'Avenir Medium', 'SourceHanSansCN';
+        width: 7em;
+      }
+      .contact a{
+        display: table-cell;
+        text-decoration: none;
+        color: rgb(var(--gray-less-dark));
       }
       .swing {
         display: flex;
@@ -55,18 +56,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         flex-direction: column;
         padding-top: 3em;
       }
-      .column.right .contact .instagram a{
-        margin-left: 24.39px;
-      }
-      .column.right .contact .xiaohongshu a{
-        margin-left: 0;
-      }
-      .column.right .contact .weibo a{
-        margin-left: 53.25px;
-      }
-      .column.right a {
-        margin-left: calc(93.98px - width);
-      }
 
       .creators {
         display: flex;
@@ -88,24 +77,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         padding-left: 2em;
         padding-top: 1em;
         font-size: var(--small-text-font);
-      }
-      .creator .contact .instagram a{
-        margin-left: 21.68px;
-      }
-      .creator .contact .youtube a{
-        margin-left: 34.08px;
-      }
-      .creator .contact .xiaohongshu a{
-        margin-left: 0;
-      }
-      .creator .contact .bilibili a{
-        margin-left: 51.09px;
-      }
-      .creator .contact .weibo a{
-        margin-left: 47.33px;
-      }
-      .creator .contact .email a{
-        margin-left: 54.6px;
       }
 
       .creator img {
@@ -173,24 +144,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             padding-left: 0.5em;
             padding-top: 0.5em;
             font-size: 12px;
-          }
-          .creator .contact .instagram a{
-            margin-left: 16.26px;
-          }
-          .creator .contact .youtube a{
-            margin-left: 25.56px;
-          }
-          .creator .contact .xiaohongshu a{
-            margin-left: 0;
-          }
-          .creator .contact .bilibili a{
-            margin-left: 38.31px;
-          }
-          .creator .contact .weibo a{
-            margin-left: 35.5px;
-          }
-          .creator .contact .email a{
-            margin-left: 40.94px;
           }
       }
     </style>

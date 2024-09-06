@@ -55,6 +55,19 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
             font-size: var(--normal-text-font);
             color: rgb(var(--gray));
         }
+        .sidebar .social-links {
+            display: flex;
+            gap: 1em;
+            padding-top: 1em;
+            padding-left: 0.3em;
+        }
+        .sidebar .social-links a {
+            text-decoration: none;
+        }
+        .sidebar .social-links img {
+            height: 50px;
+            width: auto;
+        }
         .shownotes-container {
             padding-left: calc(25% + 1.5em + 3em);
         }
@@ -62,6 +75,16 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
             padding-left: 3em;
             border-left: 1px solid rgb(var(--gray-light));
             font-size: var(--small-text-font);
+        }
+        @media (max-width: 1200px) {
+            .sidebar .social-links {
+                flex-direction: column;
+                gap: 0;
+            }
+            .sidebar .social-links img {
+                height: 30px;
+                width: audo;
+            }
         }
         @media (max-width: 720px) {
             main {
@@ -85,6 +108,19 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
                 padding-left: 0;
                 border-left: none;
             }
+            .sidebar .social-links {
+                flex-direction: row;
+                gap: 0.5em;
+            }
+            .social-links img[src="/podcast/spotify_gray.svg"] {
+                content: url('/podcast/spotify_pattern_gray.svg');
+            }
+            .social-links img[src="/podcast/apple_gray.svg"] {
+                content: url('/podcast/apple_pattern_gray.svg');
+            }
+            .social-links img[src="/podcast/xiaoyuzhou_gray.svg"] {
+                content: url('/podcast/xiaoyuzhou_pattern_gray.svg');
+            }
         }
     </style>
 </head>
@@ -98,6 +134,17 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
             </audio>
             <div class="title">{title}</div>
             <div class="date"><FormattedDate isoDate={pubDate} /></div>
+            <div class="social-links">
+                <a href="https://open.spotify.com/show/4DXRKUuxT74esW7HH4eO8h" target="_blank">
+                    <img src="/podcast/spotify_gray.svg" alt="Logo" />
+                </a>
+                <a href="https://podcasts.apple.com/cn/podcast/swing/id1762772396" target="_blank">
+                    <img src="/podcast/apple_gray.svg" alt="Logo" />
+                </a>
+                <a href="https://www.xiaoyuzhoufm.com/podcast/65d3081ebc5c5b696bcc867d" target="_blank">
+                    <img src="/podcast/xiaoyuzhou_gray.svg" alt="Logo" />
+                </a>
+            </div>
         </aside>
         <div class="shownotes-container">
             <div class="shownotes" set:html={shownotes}></div>

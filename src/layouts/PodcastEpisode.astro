@@ -9,13 +9,21 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'podcast'>['data'];
 
 const { title, cover, pubDate, shownotes, audio } = Astro.props;
-console.log(audio);
 
 ---
 
 <html lang="en">
 <head>
     <BaseHead title={title} description={title}/>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('/') && !href.startsWith('#') && !href.includes(window.location.hostname)) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    </script>
     <style>
         main {
             background-color: rgb(var(--gray-super-light));

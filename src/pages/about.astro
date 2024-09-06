@@ -55,6 +55,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         flex-direction: column;
         padding-top: 3em;
       }
+      .column.right .contact .instagram a{
+        margin-left: 24.39px;
+      }
+      .column.right .contact .xiaohongshu a{
+        margin-left: 0;
+      }
+      .column.right .contact .weibo a{
+        margin-left: 53.25px;
+      }
+      .column.right a {
+        margin-left: calc(93.98px - width);
+      }
 
       .creators {
         display: flex;
@@ -76,6 +88,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         padding-left: 2em;
         padding-top: 1em;
         font-size: var(--small-text-font);
+      }
+      .creator .contact .instagram a{
+        margin-left: 21.68px;
+      }
+      .creator .contact .youtube a{
+        margin-left: 34.08px;
+      }
+      .creator .contact .xiaohongshu a{
+        margin-left: 0;
+      }
+      .creator .contact .bilibili a{
+        margin-left: 51.09px;
+      }
+      .creator .contact .weibo a{
+        margin-left: 47.33px;
+      }
+      .creator .contact .email a{
+        margin-left: 54.6px;
       }
 
       .creator img {
@@ -115,7 +145,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           }
 
           .creator .name {
-            padding-right: 90px;
+            padding-right: calc(100% - 180px);
           }
       }
       @media (max-width: 720px) {
@@ -131,15 +161,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             padding-left: 0;
             padding-right: 0;
           }
+          .creator img {
+            margin-bottom: 0.5em;
+          }
           .creator .name {
             padding-right: 0;
             font-size: var(--small-text-font);
           }
           .creator .contact {
             flex: 1;
-            padding-left: 1em;
+            padding-left: 0.5em;
             padding-top: 0.5em;
             font-size: 12px;
+          }
+          .creator .contact .instagram a{
+            margin-left: 16.14px;
+          }
+          .creator .contact .youtube a{
+            margin-left: 25.36px;
+          }
+          .creator .contact .xiaohongshu a{
+            margin-left: 0;
+          }
+          .creator .contact .bilibili a{
+            margin-left: 38.02px;
+          }
+          .creator .contact .weibo a{
+            margin-left: 35.22px;
+          }
+          .creator .contact .email a{
+            margin-left: 40.63px;
           }
       }
     </style>
@@ -159,9 +210,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 Welcome to the playground of Flora and Aiden. We often think back to those moments of relaxation on the swing: light, free, and relax. Swing is our brand and our personal space. It encompasses video, podcasts, and photography, and who knows, maybe some writing, illustrations, products, and more in the future. We wanted to try out many different things, so we packed a bit of possibility into this site. Thank you for finding us, and we invite you to join us in feeling the joy of having your feet off the ground!
               </div>
               <nav class="contact">
-                  <div><strong>Instagram</strong><a href="https://www.instagram.com/swingofficial000" target="_blank" style="margin-left: 24.39px">swingofficial000</a></div>
-                  <div><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
-                  <div><strong>Weibo</strong><a href="https://weibo.com/u/7872160033" target="_blank" style="margin-left: 53.25px">SwingOfficial</a></div>
+                  <div class="instagram"><strong>Instagram</strong><a href="https://www.instagram.com/swingofficial000" target="_blank">swingofficial000</a></div>
+                  <div class="xiaohongshu"><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/6305f5ce000000001200fcd2" target="_blank">Swing</a></div>
+                  <div class="weibo"><strong>Weibo</strong><a href="https://weibo.com/u/7872160033" target="_blank">SwingOfficial</a></div>
               </nav>
           </div>
         </div>
@@ -172,12 +223,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
               <div class="name">Aiden Huang</div>
             </div>
             <nav class="contact">
-                  <div><strong>Instagram</strong><a href="https://www.instagram.com/ahuang0808" target="_blank" style="margin-left: 21.68px">ahuang0808</a></div>
-                  <div><strong>Youtube</strong><a href="https://www.youtube.com/@ahuang96" target="_blank" style="margin-left: 34.08px">啊环环环环环</a></div>
-                  <div><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
-                  <div><strong>Bilibili</strong><a href="https://space.bilibili.com/9066701" target="_blank" style="margin-left: 51.09px">啊环环环环环</a></div>
-                  <div><strong>Weibo</strong><a href="https://weibo.com/u/5496992078" target="_blank" style="margin-left: 47.33px">啊环环环环环</a></div>
-                  <div><strong>Email</strong><a href="mailto:ahuang9688@gmail.com" style="margin-left: 54.6px">ahuang9688@gmail.com</a></div>
+                  <div class="instagram"><strong>Instagram</strong><a href="https://www.instagram.com/ahuang0808" target="_blank" >ahuang0808</a></div>
+                  <div class="youtube"><strong>Youtube</strong><a href="https://www.youtube.com/@ahuang96" target="_blank">啊环环环环环</a></div>
+                  <div class="xiaohongshu"><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/60084eef000000000100409b" target="_blank">啊环环环环环</a></div>
+                  <div class="bilibili"><strong>Bilibili</strong><a href="https://space.bilibili.com/9066701" target="_blank">啊环环环环环</a></div>
+                  <div class="weibo"><strong>Weibo</strong><a href="https://weibo.com/u/5496992078" target="_blank">啊环环环环环</a></div>
+                  <div class="email"><strong>Email</strong><a href="mailto:ahuang9688@gmail.com">ahuang9688@gmail.com</a></div>
             </nav>
           </div>
           <div class="creator">
@@ -186,10 +237,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
               <div class="name">Flora Yao</div>
             </div>
               <div class="contact">
-                <div class="contact-item"><strong>Instagram</strong><a href="https://www.instagram.com/jingyeyao" target="_blank" style="margin-left: 21.68px">jingyeyao</a></div>
-                <div class="contact-item"><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
-                <div class="contact-item"><strong>Weibo</strong><a href="https://weibo.com/u/1973940471" target="_blank" style="margin-left: 47.33px">二花花花花花</a></div>
-                <div class="contact-item"><strong>Email</strong><a href="mailto:ffjingye@gmail.com" style="margin-left: 54.6px">ffjingye@gmail.com</a></div>
+                <div class="instagram"><strong>Instagram</strong><a href="https://www.instagram.com/jingyeyao" target="_blank">jingyeyao</a></div>
+                <div class="xiaohongshu"><strong>Xiaohongshu</strong><a href="https://www.xiaohongshu.com/user/profile/58fb51df50c4b471e7a40265" target="_blank">二花花花花花</a></div>
+                <div class="weibo"><strong>Weibo</strong><a href="https://weibo.com/u/1973940471" target="_blank">二花花花花花</a></div>
+                <div class="email"><strong>Email</strong><a href="mailto:ffjingye@gmail.com">ffjingye@gmail.com</a></div>
               </div>
           </div>
         </div>

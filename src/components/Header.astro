@@ -52,7 +52,12 @@ const { backgroundColor = 'rgb(var(--white))'} = Astro.props;
 		border: none;
 		font-size: 2em;
 		cursor: pointer;
-		padding-bottom: 15px;
+		padding: 0 0 15px 0;
+		color: rgb(var(--black));
+	}
+	
+	.menu-toggle:focus {
+		outline: none; /* 禁用点击时的默认聚焦样式 */
 	}
 
 	@media (max-width: 720px) {

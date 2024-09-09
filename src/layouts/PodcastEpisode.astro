@@ -128,7 +128,7 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
     <Header />
     <main>
         <aside class="sidebar">
-            <img class="cover" src={cover} alt={`Cover image for ${title}`} />
+            <img class="cover" src={cover} alt={`Cover for ${title}`} />
             <audio controls src={audio} controlslist="nodownload">
                 Your browser does not support the audio element.
             </audio>
@@ -148,7 +148,7 @@ const { title, cover, pubDate, shownotes, audio } = Astro.props;
         </aside>
         <div class="shownotes-container">
             <div class="shownotes" set:html={shownotes}></div>
-        </divdiv>
+        </div>
     </main>
     <Footer backgroundColor="rgb(var(--gray-super-light))"/>
     
